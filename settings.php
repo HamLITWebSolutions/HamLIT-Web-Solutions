@@ -198,5 +198,3 @@ if (trim(get_option('enablelivechat')) == 1)
 </form>
 </body>
 </html>
-
-
