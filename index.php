@@ -6,7 +6,7 @@ GitHub Plugin URI: hamlitwebsolutions/HamLIT-Web-Solutions
 Description: Provides Customization Options Provided by HamLIT Web Solutions
 Author: HamLIT Web Solutions
 Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
+Version: 1.0.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Text Domain: HamLIT-Web-Solutions
