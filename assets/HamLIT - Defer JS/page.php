@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Defer Javascript ////////////////////
-            $deferjsvalue = !empty($_POST['deferjs']) ? $_POST['deferjs']:0;
-            update_option('deferjs', $deferjsvalue);
+            $hamlit_deferjsvalue = !empty($_POST['hamlit_deferjs']) ? $_POST['hamlit_deferjs']:0;
+            update_option('hamlit_deferjs', $hamlit_deferjsvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Defer Javascript -->
 <div><br></div>
-<div><input type = "checkbox" id = "deferjs" name = "deferjs" value = "1" <?php if(get_option('deferjs') == 1) echo 'checked';?>/> Defer Javascript </div>
+<div><input type = "checkbox" id = "hamlit_deferjs" name = "hamlit_deferjs" value = "1" <?php if(get_option('hamlit_deferjs') == 1) echo 'checked';?>/> Defer Javascript </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// HamLIT Site Health ////////////////////
-            $hamlitsitehealthvalue = !empty($_POST['hamlitsitehealth']) ? $_POST['hamlitsitehealth']:0;
-            update_option('hamlitsitehealth', $hamlitsitehealthvalue);
+            $hamlit_sitehealthvalue = !empty($_POST['hamlit_sitehealth']) ? $_POST['hamlit_sitehealth']:0;
+            update_option('hamlit_sitehealth', $hamlit_sitehealthvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- HamLIT Site Health -->
 <div><br></div>
-<div><input type = "checkbox" id = "hamlitsitehealth" name = "hamlitsitehealth" value = "1" <?php if(get_option('hamlitsitehealth') == 1) echo 'checked';?>/> Customize Site Health Checks </div>
+<div><input type = "checkbox" id = "hamlit_sitehealth" name = "hamlit_sitehealth" value = "1" <?php if(get_option('hamlit_sitehealth') == 1) echo 'checked';?>/> Customize Site Health Checks </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

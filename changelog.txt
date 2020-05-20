@@ -1,0 +1,37 @@
+version 1.0.2 ( updated 05-20-2020 )
+- Changes:
+	* Added 'Clean Database' button on main settings page.
+	* Added option to enable Admin Live Chat on login page.
+	* Changed database table option names, added 'hamlit_' prefix to all options added by our plugins.
+- Fixes:
+    * N/A
+- Known Issues:
+	* N/A
+- Changes Coming Soon:
+	* Add HamLIT Web Solutions links and context on main settings page.
+
+
+version 1.0.1 ( updated 05-19-2020 )
+- Changes:
+	* Segragated settings to their own pages to allow for additional customization coming with a later update.
+- Fixes:
+	* Fixed Disable Users so the function is now called and runs correctly.
+- Known Issues:
+	* N/A
+- Changes Coming Soon:
+	* Add Clean Database button on main settings page.
+	* Add HamLIT Web Solutions links and context on main settings page.
+	* Add Admin Live Chat to login page (or add option to enable on login page.)
+	* Change database table option names, add 'hamlit_' prefix to all options added by our plugins.
+
+version 1.0.0 ( created 05-18-2020 )
+- Initial Release.
+- Known Issues:
+	* Disable Users function called incorrectly.
+- Changes Coming Soon:
+	* Fix Disable Users function call
+	* Segragate settings to their own pages to allow for additional customization.
+	* Add Clean Database button on main settings page.
+	* Add HamLIT Web Solutions links and context on main settings page.
+	* Add Admin Live Chat to login page (or add option to enable on login page.)
+	* Change database table option names, add 'hamlit_' prefix to all options added by our plugins.

@@ -6,7 +6,7 @@ GitHub Plugin URI: hamlitwebsolutions/HamLIT-Web-Solutions
 Description: Provides Customization Options Provided by HamLIT Web Solutions
 Author: HamLIT Web Solutions
 Author URI: https://hamlitwebsolutions.com
-Version: 1.0.1
+Version: 1.0.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Text Domain: HamLIT-Web-Solutions
@@ -265,7 +265,7 @@ function hamlit_dashboard() {
 function hamlit_add_extra_profile_fields() {
     include ('assets/HamLIT - Add Extra Profile Fields/page.php');
 }
-if (trim(get_option('addextraprofilefields')) == 1) {
+if (trim(get_option('hamlit_addextraprofilefields')) == 1) {
     include ('assets/HamLIT - Add Extra Profile Fields/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -285,7 +285,7 @@ if (trim(get_option('addextraprofilefields')) == 1) {
 function hamlit_admin_live_chat_widget() {
     include ('assets/HamLIT - Admin Live Chat Widget/page.php');
 }
-if (trim(get_option('enablelivechat')) == 1) {
+if (trim(get_option('hamlit_enablelivechat')) == 1) {
     include ('assets/HamLIT - Admin Live Chat Widget/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -305,7 +305,7 @@ if (trim(get_option('enablelivechat')) == 1) {
 function hamlit_change_my_account_sections() {
     include ('assets/HamLIT - Change My Account Sections/page.php');
 }
-if (trim(get_option('changemyaccountsections')) == 1) {
+if (trim(get_option('hamlit_changemyaccountsections')) == 1) {
     include ('assets/HamLIT - Change My Account Sections/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -325,7 +325,7 @@ if (trim(get_option('changemyaccountsections')) == 1) {
 function hamlit_change_woocommerce_columns() {
     include ('assets/HamLIT - Change Woocommerce Columns/page.php');
 }
-if (trim(get_option('changewoocolumns')) == 1) {
+if (trim(get_option('hamlit_changewoocolumns')) == 1) {
     include ('assets/HamLIT - Change Woocommerce Columns/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -345,7 +345,7 @@ if (trim(get_option('changewoocolumns')) == 1) {
 function hamlit_custom_core_css() {
     include ('assets/HamLIT - Custom Core CSS/page.php');
 }
-if (trim(get_option('customcorecss')) == 1) {
+if (trim(get_option('hamlit_customcorecss')) == 1) {
     include ('assets/HamLIT - Custom Core CSS/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -365,7 +365,7 @@ if (trim(get_option('customcorecss')) == 1) {
 function hamlit_defer_js() {
     include ('assets/HamLIT - Defer JS/page.php');
 }
-if (trim(get_option('deferjs')) == 1) {
+if (trim(get_option('hamlit_deferjs')) == 1) {
     include ('assets/HamLIT - Defer JS/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -385,7 +385,7 @@ if (trim(get_option('deferjs')) == 1) {
 function hamlit_disable_users() {
     include ('assets/HamLIT - Disable Users/page.php');
 }
-if (trim(get_option('disableusers')) == 1) {
+if (trim(get_option('hamlit_disableusers')) == 1) {
     include ('assets/HamLIT - Disable Users/init.php');
 }
 ///////////////////////////////////////////////////
@@ -405,7 +405,7 @@ if (trim(get_option('disableusers')) == 1) {
 function hamlit_display_user_id() {
     include ('assets/HamLIT - Display User ID/page.php');
 }
-if (trim(get_option('displayuserid')) == 1) {
+if (trim(get_option('hamlit_displayuserid')) == 1) {
     include ('assets/HamLIT - Display User ID/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -425,7 +425,7 @@ if (trim(get_option('displayuserid')) == 1) {
 function hamlit_hide_title() {
     include ('assets/HamLIT - Hide Title/page.php');
 }
-if (trim(get_option('hidetitle')) == 1) {
+if (trim(get_option('hamlit_hidetitle')) == 1) {
     include ('assets/HamLIT - Hide Title/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -445,7 +445,7 @@ if (trim(get_option('hidetitle')) == 1) {
 function hamlit_only_sell_to() {
     include ('assets/HamLIT - Only Sell To/page.php');
 }
-if (trim(get_option('onlysellto')) == 1) {
+if (trim(get_option('hamlit_onlysellto')) == 1) {
     include ('assets/HamLIT - Only Sell To/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -465,7 +465,7 @@ if (trim(get_option('onlysellto')) == 1) {
 function hamlit_remove_dashboard_widgets() {
     include ('assets/HamLIT - Remove Dashboard Widgets/page.php');
 }
-if (trim(get_option('removedashwidgets')) == 1) {
+if (trim(get_option('hamlit_removedashwidgets')) == 1) {
     include ('assets/HamLIT - Remove Dashboard Widgets/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -485,7 +485,7 @@ if (trim(get_option('removedashwidgets')) == 1) {
 function hamlit_remove_post_count() {
     include ('assets/HamLIT - Remove Post Count/page.php');
 }
-if (trim(get_option('removepostcount')) == 1) {
+if (trim(get_option('hamlit_removepostcount')) == 1) {
     include ('assets/HamLIT - Remove Post Count/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -505,7 +505,7 @@ if (trim(get_option('removepostcount')) == 1) {
 function hamlit_remove_product_count() {
     include ('assets/HamLIT - Remove Post Count/page.php');
 }
-if (trim(get_option('removeproductcount')) == 1) {
+if (trim(get_option('hamlit_removeproductcount')) == 1) {
     include ('assets/HamLIT - Remove Product Count/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -525,7 +525,7 @@ if (trim(get_option('removeproductcount')) == 1) {
 function hamlit_remove_profile_fields() {
     include ('assets/HamLIT - Remove Profile Fields/page.php');
 }
-if (trim(get_option('removeprofilefields')) == 1) {
+if (trim(get_option('hamlit_removeprofilefields')) == 1) {
     include ('assets/HamLIT - Remove Profile Fields/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -545,7 +545,7 @@ if (trim(get_option('removeprofilefields')) == 1) {
 function hamlit_remove_screen_options() {
     include ('assets/HamLIT - Remove Screen Options/page.php');
 }
-if (trim(get_option('removescreenoptions')) == 1) {
+if (trim(get_option('hamlit_removescreenoptions')) == 1) {
     include ('assets/HamLIT - Remove Screen Options/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -565,7 +565,7 @@ if (trim(get_option('removescreenoptions')) == 1) {
 function hamlit_remove_notification_and_nags() {
     include ('assets/HamLIT - Remove Update Notification and Nags/page.php');
 }
-if (trim(get_option('removenags')) == 1) {
+if (trim(get_option('hamlit_removenags')) == 1) {
     include ('assets/HamLIT - Remove Update Notification and Nags/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -585,7 +585,7 @@ if (trim(get_option('removenags')) == 1) {
 function hamlit_remove_wp_version_footer() {
     include ('assets/HamLIT - Remove WP Version Footer/page.php');
 }
-if (trim(get_option('removeversionfooter')) == 1) {
+if (trim(get_option('hamlit_removeversionfooter')) == 1) {
     include ('assets/HamLIT - Remove WP Version Footer/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -605,7 +605,7 @@ if (trim(get_option('removeversionfooter')) == 1) {
 function hamlit_rename_sidebar_items() {
     include ('assets/HamLIT - Rename Sidebar Items/page.php');
 }
-if (trim(get_option('renamesidebaritems')) == 1) {
+if (trim(get_option('hamlit_renamesidebaritems')) == 1) {
     include ('assets/HamLIT - Rename Sidebar Items/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -625,7 +625,7 @@ if (trim(get_option('renamesidebaritems')) == 1) {
 function hamlit_site_health() {
     include ('assets/HamLIT - Site Health/page.php');
 }
-if (trim(get_option('hamlitsitehealth')) == 1) {
+if (trim(get_option('hamlit_sitehealth')) == 1) {
     include ('assets/HamLIT - Site Health/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -645,7 +645,7 @@ if (trim(get_option('hamlitsitehealth')) == 1) {
 function hamlit_site_info_shortcode() {
     include ('assets/HamLIT - Site Info Shortcode/page.php');
 }
-if (trim(get_option('bloginfosc')) == 1) {
+if (trim(get_option('hamlit_bloginfosc')) == 1) {
     include ('assets/HamLIT - Site Info Shortcode/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -665,7 +665,7 @@ if (trim(get_option('bloginfosc')) == 1) {
 function hamlit_stop_smoothness_jquery() {
     include ('assets/HamLIT - Stop Smoothness Jquery/page.php');
 }
-if (trim(get_option('stopsmoothnessjquery')) == 1) {
+if (trim(get_option('hamlit_stopsmoothnessjquery')) == 1) {
     include ('assets/HamLIT - Stop Smoothness Jquery/functions.php');
 }
 ///////////////////////////////////////////////////
@@ -685,7 +685,7 @@ if (trim(get_option('stopsmoothnessjquery')) == 1) {
 function hamlit_view_page_identifier() {
     include ('assets/HamLIT - View Page Identifier/page.php');
 }
-if (trim(get_option('viewpageidentifier')) == 1) {
+if (trim(get_option('hamlit_viewpageidentifier')) == 1) {
     include ('assets/HamLIT - View Page Identifier/functions.php');
 }
 ///////////////////////////////////////////////////

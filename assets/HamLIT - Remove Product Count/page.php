@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Remove Product Count ////////////////////
-            $removeproductcountvalue = !empty($_POST['removeproductcount']) ? $_POST['removeproductcount']:0;
-            update_option('removeproductcount', $removeproductcountvalue);
+            $hamlit_removeproductcountvalue = !empty($_POST['hamlit_removeproductcount']) ? $_POST['hamlit_removeproductcount']:0;
+            update_option('hamlit_removeproductcount', $hamlit_removeproductcountvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Remove Product Count -->
 <div><br></div>
-<div><input type = "checkbox" id = "removeproductcount" name = "removeproductcount" value = "1" <?php if(get_option('removeproductcount') == 1) echo 'checked';?>/> Remove Product Count </div>
+<div><input type = "checkbox" id = "hamlit_removeproductcount" name = "hamlit_removeproductcount" value = "1" <?php if(get_option('hamlit_removeproductcount') == 1) echo 'checked';?>/> Remove Product Count </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

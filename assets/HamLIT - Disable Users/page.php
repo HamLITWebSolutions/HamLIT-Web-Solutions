@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Disable Users ////////////////////
-            $disableusersvalue = !empty($_POST['disableusers']) ? $_POST['disableusers']:0;
-            update_option('disableusers', $disableusersvalue);
+            $hamlit_disableusersvalue = !empty($_POST['hamlit_disableusers']) ? $_POST['hamlit_disableusers']:0;
+            update_option('hamlit_disableusers', $hamlit_disableusersvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Disable Users -->
 <div><br></div>
-<div><input type = "checkbox" id = "disableusers" name = "disableusers" value = "1" <?php if(get_option('disableusers') == 1) echo 'checked';?>/> Disable Users </div>
+<div><input type = "checkbox" id = "hamlit_disableusers" name = "hamlit_disableusers" value = "1" <?php if(get_option('hamlit_disableusers') == 1) echo 'checked';?>/> Disable Users </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

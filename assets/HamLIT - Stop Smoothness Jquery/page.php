@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Stop Smoothness Jquery ////////////////////
-            $stopsmoothnessjqueryvalue = !empty($_POST['stopsmoothnessjquery']) ? $_POST['stopsmoothnessjquery']:0;
-            update_option('stopsmoothnessjquery', $stopsmoothnessjqueryvalue);
+            $hamlit_stopsmoothnessjqueryvalue = !empty($_POST['hamlit_stopsmoothnessjquery']) ? $_POST['hamlit_stopsmoothnessjquery']:0;
+            update_option('hamlit_stopsmoothnessjquery', $hamlit_stopsmoothnessjqueryvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Stop Smoothness Jquery -->
 <div><br></div>
-<div><input type = "checkbox" id = "stopsmoothnessjquery" name = "stopsmoothnessjquery" value = "1" <?php if(get_option('stopsmoothnessjquery') == 1) echo 'checked';?>/> Stop Smoothness Jquery </div>
+<div><input type = "checkbox" id = "hamlit_stopsmoothnessjquery" name = "hamlit_stopsmoothnessjquery" value = "1" <?php if(get_option('hamlit_stopsmoothnessjquery') == 1) echo 'checked';?>/> Stop Smoothness Jquery </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Remove Screen Options ////////////////////
-            $removescreenoptionsvalue = !empty($_POST['removescreenoptions']) ? $_POST['removescreenoptions']:0;
-            update_option('removescreenoptions', $removescreenoptionsvalue);
+            $hamlit_removescreenoptionsvalue = !empty($_POST['hamlit_removescreenoptions']) ? $_POST['hamlit_removescreenoptions']:0;
+            update_option('hamlit_removescreenoptions', $hamlit_removescreenoptionsvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Remove Screen Options -->
 <div><br></div>
-<div><input type = "checkbox" id = "removescreenoptions" name = "removescreenoptions" value = "1" <?php if(get_option('removescreenoptions') == 1) echo 'checked';?>/> Remove Screen Options </div>
+<div><input type = "checkbox" id = "hamlit_removescreenoptions" name = "hamlit_removescreenoptions" value = "1" <?php if(get_option('hamlit_removescreenoptions') == 1) echo 'checked';?>/> Remove Screen Options </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Only Sell To ////////////////////
-            $onlyselltovalue = !empty($_POST['onlysellto']) ? $_POST['onlysellto']:0;
-            update_option('onlysellto', $onlyselltovalue);
+            $hamlit_onlyselltovalue = !empty($_POST['hamlit_onlysellto']) ? $_POST['hamlit_onlysellto']:0;
+            update_option('hamlit_onlysellto', $hamlit_onlyselltovalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Only Sell To -->
 <div><br></div>
-<div><input type = "checkbox" id = "onlysellto" name = "onlysellto" value = "1" <?php if(get_option('onlysellto') == 1) echo 'checked';?>/> Only Sell To </div>
+<div><input type = "checkbox" id = "hamlit_onlysellto" name = "hamlit_onlysellto" value = "1" <?php if(get_option('hamlit_onlysellto') == 1) echo 'checked';?>/> Only Sell To </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

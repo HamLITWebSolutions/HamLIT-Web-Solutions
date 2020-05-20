@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Change Woocommerce Columns ////////////////////
-            $changewoocolumnsvalue = !empty($_POST['changewoocolumns']) ? $_POST['changewoocolumns']:0;
-            update_option('changewoocolumns', $changewoocolumnsvalue);
+            $hamlit_changewoocolumnsvalue = !empty($_POST['hamlit_changewoocolumns']) ? $_POST['hamlit_changewoocolumns']:0;
+            update_option('hamlit_changewoocolumns', $hamlit_changewoocolumnsvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Change Woocommerce Columns -->
 <div><br></div>
-<div><input type = "checkbox" id = "changewoocolumns" name = "changewoocolumns" value = "1" <?php if(get_option('changewoocolumns') == 1) echo 'checked';?>/> Change Woocommerce Columns </div>
+<div><input type = "checkbox" id = "hamlit_changewoocolumns" name = "hamlit_changewoocolumns" value = "1" <?php if(get_option('hamlit_changewoocolumns') == 1) echo 'checked';?>/> Change Woocommerce Columns </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

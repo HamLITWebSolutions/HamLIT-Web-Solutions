@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Add Extra Profile Fields ////////////////////
-            $addextraprofilefieldsvalue = !empty($_POST['addextraprofilefields']) ? $_POST['addextraprofilefields']:0;
-            update_option('addextraprofilefields', $addextraprofilefieldsvalue);
+            $hamlit_addextraprofilefieldsvalue = !empty($_POST['hamlit_addextraprofilefields']) ? $_POST['hamlit_addextraprofilefields']:0;
+            update_option('hamlit_addextraprofilefields', $hamlit_addextraprofilefieldsvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Add Extra Profile Fields -->
 <div><br></div>
-<div><input type = "checkbox" id = "addextraprofilefields" name = "addextraprofilefields" value = "1" <?php if(get_option('addextraprofilefields') == 1) echo 'checked';?>/> Add Extra Profile Fields </div>
+<div><input type = "checkbox" id = "hamlit_addextraprofilefields" name = "hamlit_addextraprofilefields" value = "1" <?php if(get_option('hamlit_addextraprofilefields') == 1) echo 'checked';?>/> Add Extra Profile Fields </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>

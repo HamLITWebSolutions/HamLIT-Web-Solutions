@@ -2,8 +2,8 @@
 ####### Post when LITSubmit is Clicked #######
 if(isset($_POST['litsubmit'])){
         //////////////////// Change My Account Sections ////////////////////
-            $changemyaccountsectionsvalue = !empty($_POST['changemyaccountsections']) ? $_POST['changemyaccountsections']:0;
-            update_option('changemyaccountsections', $changemyaccountsectionsvalue);
+            $hamlit_changemyaccountsectionsvalue = !empty($_POST['hamlit_changemyaccountsections']) ? $_POST['hamlit_changemyaccountsections']:0;
+            update_option('hamlit_changemyaccountsections', $hamlit_changemyaccountsectionsvalue);
     ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
             ######## Submitted Changes, Time to Refresh!#######
             echo "<meta http-equiv='refresh' content='0'>";
@@ -22,7 +22,7 @@ if(isset($_POST['litsubmit'])){
 <form method="post" action="">
 <!-- Change My Account Sections -->
 <div><br></div>
-<div><input type = "checkbox" id = "changemyaccountsections" name = "changemyaccountsections" value = "1" <?php if(get_option('changemyaccountsections') == 1) echo 'checked';?>/> Change My Account Sections </div>
+<div><input type = "checkbox" id = "hamlit_changemyaccountsections" name = "hamlit_changemyaccountsections" value = "1" <?php if(get_option('hamlit_changemyaccountsections') == 1) echo 'checked';?>/> Change My Account Sections </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>
