@@ -1,20 +1,23 @@
 <?php
-####### Post when LITSubmit is Clicked #######
+// Set Options for Function
+$options = [ 
+    'hamlit_enablelivechat',
+        'hamlit_loginchat',
+        'hamlit_hidechat',
+];
+
+// Post Changes to Options when Submitted
 if(isset($_POST['litsubmit'])){
-        //////////////////// Priority Support Settings ////////////////////
-            ####### Enable Admin Live Chat Checkbox #######
-            $hamlit_enablelivechatvalue = !empty($_POST['hamlit_enablelivechat']) ? $_POST['hamlit_enablelivechat']:0;
-            update_option('hamlit_enablelivechat', $hamlit_enablelivechatvalue);
-            ####### Login Page Chat Checkbox #######
-            $hamlit_loginchatvalue = !empty($_POST['hamlit_loginchat']) ? $_POST['hamlit_loginchat']:0;
-            update_option('hamlit_loginchat', $hamlit_loginchatvalue);
-            ####### Hide Chat Checkbox #######
-            $hamlit_hidechatvalue = !empty($_POST['hamlit_hidechat']) ? $_POST['hamlit_hidechat']:0;
-            update_option('hamlit_hidechat', $hamlit_hidechatvalue);
-    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
-            ######## Submitted Changes, Time to Refresh!#######
-            echo "<meta http-equiv='refresh' content='0'>";
+            foreach ( $options as $option ){
+            $checkboxvalue = !empty($_POST[$option]) ? $_POST[$option]:0;
+	        update_option( $option, stripslashes($checkboxvalue) );
         }
+
+    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
+            ######## Submitted Changes, Display Success Message #######
+            echo '<div class="updated"> <p>' . __('Success: Your changes have been saved.') . '</p> </div>';
+            #echo "<meta http-equiv='refresh' content='0'>";
+}
 ?>
 
 <html>
@@ -50,8 +53,8 @@ if (trim(get_option('hamlit_enablelivechat')) == 1)
     } 
 ?>
 <!-- Submit Button -->
-<div><br></div>
-         <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>
+<!--<div><br></div>
+         <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/> -->
 </form>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 // Set Options for Function
 $options = [ 
-    'hamlit_removenags',
+    'hamlit_transientmanager',
 ];
 
 // Post Changes to Options when Submitted
@@ -26,14 +26,16 @@ if(isset($_POST['litsubmit'])){
 </head>
 
 <body>
-    <h1>Remove Update Notification and Nags</h1>
+    <h1>Transient Manager</h1>
 <form method="post" action="">
-<!-- Remove Update Notification and Nags -->
+<!-- Change My Account Sections -->
 <div><br></div>
-<div><input type = "checkbox" id = "hamlit_removenags" name = "hamlit_removenags" value = "1" <?php if(get_option('hamlit_removenags') == 1) echo 'checked';?>/> Remove Update Notification and Nags </div>
+<div><input type = "checkbox" id = "hamlit_transientmanager" name = "hamlit_transientmanager" value = "1" <?php if(get_option('hamlit_transientmanager') == 1) echo 'checked';?>/> Enable Transient Manager </div>
 <!-- Submit Button -->
 <div><br></div>
          <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>
 </form>
 </body>
 </html>
+
+

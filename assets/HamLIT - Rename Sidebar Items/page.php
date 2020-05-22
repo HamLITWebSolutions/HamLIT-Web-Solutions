@@ -1,13 +1,21 @@
 <?php
-####### Post when LITSubmit is Clicked #######
+// Set Options for Function
+$options = [ 
+    'hamlit_renamesidebaritems',
+];
+
+// Post Changes to Options when Submitted
 if(isset($_POST['litsubmit'])){
-        //////////////////// Rename Sidebar Items ////////////////////
-            $hamlit_renamesidebaritemsvalue = !empty($_POST['hamlit_renamesidebaritems']) ? $_POST['hamlit_renamesidebaritems']:0;
-            update_option('hamlit_renamesidebaritems', $hamlit_renamesidebaritemsvalue);
-    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
-            ######## Submitted Changes, Time to Refresh!#######
-            echo "<meta http-equiv='refresh' content='0'>";
+            foreach ( $options as $option ){
+            $checkboxvalue = !empty($_POST[$option]) ? $_POST[$option]:0;
+	        update_option( $option, stripslashes($checkboxvalue) );
         }
+
+    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
+            ######## Submitted Changes, Display Success Message #######
+            echo '<div class="updated"> <p>' . __('Success: Your changes have been saved.') . '</p> </div>';
+            #echo "<meta http-equiv='refresh' content='0'>";
+}
 ?>
 
 <html>

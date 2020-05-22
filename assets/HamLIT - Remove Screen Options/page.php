@@ -1,13 +1,21 @@
 <?php
-####### Post when LITSubmit is Clicked #######
+// Set Options for Function
+$options = [ 
+    'hamlit_removescreenoptions',
+];
+
+// Post Changes to Options when Submitted
 if(isset($_POST['litsubmit'])){
-        //////////////////// Remove Screen Options ////////////////////
-            $hamlit_removescreenoptionsvalue = !empty($_POST['hamlit_removescreenoptions']) ? $_POST['hamlit_removescreenoptions']:0;
-            update_option('hamlit_removescreenoptions', $hamlit_removescreenoptionsvalue);
-    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
-            ######## Submitted Changes, Time to Refresh!#######
-            echo "<meta http-equiv='refresh' content='0'>";
+            foreach ( $options as $option ){
+            $checkboxvalue = !empty($_POST[$option]) ? $_POST[$option]:0;
+	        update_option( $option, stripslashes($checkboxvalue) );
         }
+
+    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
+            ######## Submitted Changes, Display Success Message #######
+            echo '<div class="updated"> <p>' . __('Success: Your changes have been saved.') . '</p> </div>';
+            #echo "<meta http-equiv='refresh' content='0'>";
+}
 ?>
 
 <html>

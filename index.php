@@ -6,7 +6,7 @@ GitHub Plugin URI: hamlitwebsolutions/HamLIT-Web-Solutions
 Description: Provides Customization Options Provided by HamLIT Web Solutions
 Author: HamLIT Web Solutions
 Author URI: https://hamlitwebsolutions.com
-Version: 1.0.2
+Version: 1.0.3
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Text Domain: HamLIT-Web-Solutions
@@ -39,13 +39,13 @@ function hamlit_menu() {
         'hamlit_add_extra_profile_fields'); //function to run
 ////////// End HamLIT - Add Extra Profile Fields //////////
 ########## HamLIT - Admin Live Chat Widget ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Admin Live Chat Widget', //page title
-        'Admin Live Chat', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Admin-Live-Chat-Widget', //slug
-        'hamlit_admin_live_chat_widget'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Admin Live Chat Widget', //page title
+#        'Admin Live Chat', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Admin-Live-Chat-Widget', //slug
+#        'hamlit_admin_live_chat_widget'); //function to run
 ////////// End HamLIT - Admin Live Chat Widget //////////
 ########## HamLIT - Change My Account Sections ##########
     add_submenu_page(
@@ -75,41 +75,50 @@ function hamlit_menu() {
         'hamlit_custom_core_css'); //function to run
 ////////// End HamLIT - Custom Core CSS //////////
 ########## HamLIT - Defer JS ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Defer JS', //page title
-        'Defer JS', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Defer-JS', //slug
-        'hamlit_defer_js'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Defer JS', //page title
+#        'Defer JS', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Defer-JS', //slug
+#        'hamlit_defer_js'); //function to run
 ////////// End HamLIT - Defer JS //////////
 ########## HamLIT - Disable Users ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Disable Users', //page title
-        'Disable Users', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Disable-Users', //slug
-        'hamlit_disable_users'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Disable Users', //page title
+#        'Disable Users', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Disable-Users', //slug
+#        'hamlit_disable_users'); //function to run
 ////////// End HamLIT - Disable Users //////////
 ########## HamLIT - Display User ID ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Display User ID', //page title
-        'Display User ID', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Display-User-ID', //slug
-        'hamlit_display_user_id'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Display User ID', //page title
+#        'Display User ID', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Display-User-ID', //slug
+#        'hamlit_display_user_id'); //function to run
 ////////// End HamLIT - Disable Users //////////
 ########## HamLIT - Hide Title ##########
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Hide Title', //page title
+#        'Hide Title', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Hide-Title', //slug
+#        'hamlit_hide_title'); //function to run
+////////// End HamLIT - Hide Title //////////
+########## HamLIT - Live Chat ##########
     add_submenu_page(
         'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Hide Title', //page title
-        'Hide Title', //menu text
+        'HamLIT - Live Chat', //page title
+        'Live Chat', //menu text
         'manage_options', //capability level
-        '/HamLIT-Hide-Title', //slug
-        'hamlit_hide_title'); //function to run
-////////// End HamLIT - Hide Title //////////
+        '/HamLIT-Live-Chat', //slug
+        'hamlit_live_chat'); //function to run
+////////// End HamLIT - Live Chat //////////
 ########## HamLIT - Only Sell To ##########
     add_submenu_page(
         'HamLIT-Web-Solutions', //parent slug
@@ -120,67 +129,67 @@ function hamlit_menu() {
         'hamlit_only_sell_to'); //function to run
 ////////// End HamLIT - Only Sell To //////////
 ########## HamLIT - Remove Dashboard Widgets ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Remove Dashboard Widgets', //page title
-        'Remove Widgets', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Remove-Dashboard-Widgets', //slug
-        'hamlit_remove_dashboard_widgets'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Remove Dashboard Widgets', //page title
+#        'Remove Widgets', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Remove-Dashboard-Widgets', //slug
+#        'hamlit_remove_dashboard_widgets'); //function to run
 ////////// End HamLIT - Remove Dashboard Widgets //////////
 ########## HamLIT - Remove Post Count ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Remove Post Count', //page title
-        'Remove Post Count', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Remove-Post-Count', //slug
-        'hamlit_remove_post_count'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Remove Post Count', //page title
+#        'Remove Post Count', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Remove-Post-Count', //slug
+#        'hamlit_remove_post_count'); //function to run
 ////////// End HamLIT - Remove Post Count //////////
 ########## HamLIT - Remove Product Count ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Remove Product Count', //page title
-        'Remove Product Count', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Remove-Product-Count', //slug
-        'hamlit_remove_product_count'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Remove Product Count', //page title
+#        'Remove Product Count', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Remove-Product-Count', //slug
+#        'hamlit_remove_product_count'); //function to run
 ////////// End HamLIT - Remove Product Count //////////
 ########## HamLIT - Remove Profile Fields ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Remove Profile Fields', //page title
-        'Remove Profile Fields', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Remove-Profile-Fields', //slug
-        'hamlit_remove_profile_fields'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Remove Profile Fields', //page title
+#        'Remove Profile Fields', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Remove-Profile-Fields', //slug
+#        'hamlit_remove_profile_fields'); //function to run
 ////////// End HamLIT - Remove Profile Fields //////////
 ########## HamLIT - Remove Screen Options ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Remove Screen Options', //page title
-        'Remove Screen Options', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Remove-Screen-Options', //slug
-        'hamlit_remove_screen_options'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Remove Screen Options', //page title
+#        'Remove Screen Options', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Remove-Screen-Options', //slug
+#        'hamlit_remove_screen_options'); //function to run
 ////////// End HamLIT - Remove Screen Options //////////
 ########## HamLIT - Remove Update Notification and Nags ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Remove Update Notification and Nags', //page title
-        'Remove Notifications', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Remove-Notification-and-Nags', //slug
-        'hamlit_remove_notification_and_nags'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Remove Update Notification and Nags', //page title
+#        'Remove Notifications', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Remove-Notification-and-Nags', //slug
+#        'hamlit_remove_notification_and_nags'); //function to run
 ////////// End HamLIT - Remove Update Notification and Nags //////////
 ########## HamLIT - Remove WP Version Footer ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Remove WP Version Footer', //page title
-        'Remove WP Footer', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Remove-WP-Version_Footer', //slug
-        'hamlit_remove_wp_version_footer'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Remove WP Version Footer', //page title
+#        'Remove WP Footer', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Remove-WP-Version_Footer', //slug
+#        'hamlit_remove_wp_version_footer'); //function to run
 ////////// End HamLIT - Remove WP Version Footer //////////
 ########## HamLIT - Rename Sidebar Items ##########
     add_submenu_page(
@@ -192,41 +201,51 @@ function hamlit_menu() {
         'hamlit_rename_sidebar_items'); //function to run
 ////////// End HamLIT - Rename Sidebar Items //////////
 ########## HamLIT - Site Health ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Site Health', //page title
-        'Site Health', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Site-Health', //slug
-        'hamlit_site_health'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#       'HamLIT - Site Health', //page title
+#        'Site Health', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Site-Health', //slug
+#        'hamlit_site_health'); //function to run
 ////////// End HamLIT - Site Health //////////
 ########## HamLIT - Site Info Shortcode ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Site Info Shortcode', //page title
-        'SiteInfo Shortcode', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Site-Info-Shortcode', //slug
-        'hamlit_site_info_shortcode'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Site Info Shortcode', //page title
+#        'SiteInfo Shortcode', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Site-Info-Shortcode', //slug
+#        'hamlit_site_info_shortcode'); //function to run
 ////////// End HamLIT - Site Info Shortcode //////////
 ########## HamLIT - Stop Smoothness JQuery ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - Stop Smoothness JQuery', //page title
-        'Stop Smoothness', //menu text
-        'manage_options', //capability level
-        '/HamLIT-Stop-Smoothness-JQuery', //slug
-        'hamlit_stop_smoothness_jquery'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Stop Smoothness JQuery', //page title
+#        'Stop Smoothness', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Stop-Smoothness-JQuery', //slug
+#        'hamlit_stop_smoothness_jquery'); //function to run
 ////////// End HamLIT - Stop Smoothness Jquery //////////
+########## HamLIT - Transient Manager ##########
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - Transient Manager', //page title
+#        'Transient Manager', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-Transient-Manager', //slug
+#        'hamlit_transient_manager'); //function to run
+////////// End HamLIT - Transient Manager //////////
 ########## HamLIT - View Page Identifier ##########
-    add_submenu_page(
-        'HamLIT-Web-Solutions', //parent slug
-        'HamLIT - View Page Identifier', //page title
-        'Page Identifier', //menu text
-        'manage_options', //capability level
-        '/HamLIT-View-Page-Identifier', //slug
-        'hamlit_view_page_identifier'); //function to run
+#    add_submenu_page(
+#        'HamLIT-Web-Solutions', //parent slug
+#        'HamLIT - View Page Identifier', //page title
+#        'Page Identifier', //menu text
+#        'manage_options', //capability level
+#        '/HamLIT-View-Page-Identifier', //slug
+#        'hamlit_view_page_identifier'); //function to run
 ////////// End HamLIT - View Page Identifier //////////
+
 //------------------- DO NOT PUT MENU ITEM BELOW THIS LINE -----------------//
 }
 add_action('admin_menu', 'hamlit_menu');
@@ -245,7 +264,7 @@ add_action('admin_menu', 'hamlit_menu');
 ###################################################
 ###################################################
 function hamlit_dashboard() {
-    include ('settings.php');
+    require ('incl/settings.php');
 }
 
 ///////////////////////////////////////////////////
@@ -438,6 +457,26 @@ if (trim(get_option('hamlit_hidetitle')) == 1) {
 ###################################################
 ###################################################
 ###################################################
+########### HamLIT - Live Chat ####################
+###################################################
+###################################################
+###################################################
+function hamlit_live_chat() {
+    include ('assets/HamLIT - Live Chat/page.php');
+}
+if (trim(get_option('hamlit_livechat')) == 1) {
+    include ('assets/HamLIT - Live Chat/functions.php');
+}
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//////////// End HamLIT - Live Chat ///////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+###################################################
+###################################################
+###################################################
 ############ HamLIT - Only Sell To ################
 ###################################################
 ###################################################
@@ -503,7 +542,7 @@ if (trim(get_option('hamlit_removepostcount')) == 1) {
 ###################################################
 ###################################################
 function hamlit_remove_product_count() {
-    include ('assets/HamLIT - Remove Post Count/page.php');
+    include ('assets/HamLIT - Remove Product Count/page.php');
 }
 if (trim(get_option('hamlit_removeproductcount')) == 1) {
     include ('assets/HamLIT - Remove Product Count/functions.php');
@@ -672,6 +711,26 @@ if (trim(get_option('hamlit_stopsmoothnessjquery')) == 1) {
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 ////// End HamLIT - Stop Smoothness JQuery ////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+###################################################
+###################################################
+###################################################
+############ HamLIT - Transient Manager ###########
+###################################################
+###################################################
+###################################################
+function hamlit_transient_manager() {
+    include ('assets/HamLIT - Transient Manager/page.php');
+}
+if (trim(get_option('hamlit_transientmanager')) == 1) {
+    include ('assets/HamLIT - Transient Manager/functions.php');
+}
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+//////// End HamLIT - Transient Manager ///////////
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////

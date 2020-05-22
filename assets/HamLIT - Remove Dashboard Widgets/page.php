@@ -1,13 +1,21 @@
 <?php
-####### Post when LITSubmit is Clicked #######
+// Set Options for Function
+$options = [ 
+    'hamlit_removedashwidgets',
+];
+
+// Post Changes to Options when Submitted
 if(isset($_POST['litsubmit'])){
-        //////////////////// Remove Dashboard Widgets ////////////////////
-            $hamlit_removedashwidgetsvalue = !empty($_POST['hamlit_removedashwidgets']) ? $_POST['hamlit_removedashwidgets']:0;
-            update_option('hamlit_removedashwidgets', $hamlit_removedashwidgetsvalue);
-    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
-            ######## Submitted Changes, Time to Refresh!#######
-            echo "<meta http-equiv='refresh' content='0'>";
+            foreach ( $options as $option ){
+            $checkboxvalue = !empty($_POST[$option]) ? $_POST[$option]:0;
+	        update_option( $option, stripslashes($checkboxvalue) );
         }
+
+    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
+            ######## Submitted Changes, Display Success Message #######
+            echo '<div class="updated"> <p>' . __('Success: Your changes have been saved.') . '</p> </div>';
+            #echo "<meta http-equiv='refresh' content='0'>";
+}
 ?>
 
 <html>

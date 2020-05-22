@@ -1,3 +1,20 @@
+version 1.0.3 ( updated 05-22-2020 )
+- Changes:
+	* Added uninstall.php script to clean database automatically upon uninstalling the plugin.
+	* Added HamLIT - Transient Manager extension to allow users to easily clear transients from the db.
+	* Added HamLIT - Live Chat extension to allow users to easily implement their Live Chat Support script on their front end.
+	* Cleaned up how variables are called using optionvariables.php
+	* Cleaned up how changes are $POST using a variable loop in each page.php
+	* Reverted segragation on several extensions as they do not need additional customization. For extensions that do further customizations, those remain segragated.
+- Fixes:
+    * Clean Database now works on Multi-Site installations.
+    * Corrected 'Remove Product Count' menu item to call the correct page. 
+- Known Issues:
+	* N/A
+- Changes Coming Soon:
+	* Add HamLIT Web Solutions links and context on main settings page.
+	* Add further customization to several functions/extensions.
+<!---------------------------------------------------------------------------!>
 version 1.0.2 ( updated 05-20-2020 )
 - Changes:
 	* Added 'Clean Database' button on main settings page.
@@ -6,11 +23,10 @@ version 1.0.2 ( updated 05-20-2020 )
 - Fixes:
     * N/A
 - Known Issues:
-	* N/A
+	* 'Remove Post Count' page is being called incorrectly from the 'Remove Product Count' menu item.
 - Changes Coming Soon:
 	* Add HamLIT Web Solutions links and context on main settings page.
-
-
+<!---------------------------------------------------------------------------!>
 version 1.0.1 ( updated 05-19-2020 )
 - Changes:
 	* Segragated settings to their own pages to allow for additional customization coming with a later update.
@@ -23,7 +39,7 @@ version 1.0.1 ( updated 05-19-2020 )
 	* Add HamLIT Web Solutions links and context on main settings page.
 	* Add Admin Live Chat to login page (or add option to enable on login page.)
 	* Change database table option names, add 'hamlit_' prefix to all options added by our plugins.
-
+<!---------------------------------------------------------------------------!>
 version 1.0.0 ( created 05-18-2020 )
 - Initial Release.
 - Known Issues:
