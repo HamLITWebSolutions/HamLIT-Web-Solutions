@@ -1,18 +1,22 @@
 <?php
-
-/*
-Plugin Name: HamLIT - Add Extra Profile Fields
-Plugin URI: https://github.com/hamlitwebsolutions/HamLIT-AddExtraProfileFields
-Description: Adds Extra Profile Fields to My Account and Users Page
-Author: HamLIT Web Solutions
-Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
-Text Domain: HamLIT - Add Extra Profile Fields
-Domain Path: /languages
-*/
-
+########## HamLIT - Add Extra Profile Fields Menu & Page ##########
+if( function_exists( 'hamlit_menu' ) ) {
+        function hamlit_add_extra_profile_fields_menu()
+        {
+        add_submenu_page(
+            'HamLIT-Web-Solutions', //parent slug
+            'HamLIT - Add Extra Profile Fields', //page title
+            'Profile Fields', //menu text
+            'manage_options', //capability level
+            '/HamLIT-Add-Extra-Profile-Fields', //slug
+            'hamlit_add_extra_profile_fields_page'); //function to run
+        }
+}
+add_action('admin_menu', 'hamlit_add_extra_profile_fields_menu');
+function hamlit_add_extra_profile_fields_page() {
+    include "page.php";
+}
+###### HamLIT - Add Extra Profile Fields ##########
 /*
  * To display additional field at My Account page 
  */ 

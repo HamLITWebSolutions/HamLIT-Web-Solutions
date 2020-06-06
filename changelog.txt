@@ -1,3 +1,22 @@
+version 1.0.4 ( updated 06-05-2020 )
+- Changes:
+	* Sub-Menu Items will only be created if the function is running.
+	* Changed Custom Core CSS to Custom Login
+	* Added Customization Options to Custom Login
+	* Added Remove WP Branding Extension.
+	* Changed Layout of HamLIT-Web-Solutions Page, now including Tabs.
+	* Changed how options are added to the Database to reduce db size.
+	* Changed how options are deleted from the database when 'cleandb' is fired.
+	* Added some content to the main page for the plugin.
+	* Moved 'Remove Screen Options' to 'Remove WP Branding'
+- Fixes:
+    * Fixed XMLRPC connection issues when Admin Live Chat is enabled on Login screen by changing the hook from 'login_url' to 'login_enqueue_scripts'
+    * Fixed issue where Media Library would not load. Caused by php outside of the php close tag in optionvariables.php.
+- Known Issues:
+	* N/A
+- Changes Coming Soon:
+	* Add further customization to several functions/extensions.
+<!---------------------------------------------------------------------------!>
 version 1.0.3 ( updated 05-22-2020 )
 - Changes:
 	* Added uninstall.php script to clean database automatically upon uninstalling the plugin.
@@ -5,7 +24,7 @@ version 1.0.3 ( updated 05-22-2020 )
 	* Added HamLIT - Live Chat extension to allow users to easily implement their Live Chat Support script on their front end.
 	* Cleaned up how variables are called using optionvariables.php
 	* Cleaned up how changes are $POST using a variable loop in each page.php
-	* Reverted segragation on several extensions as they do not need additional customization. For extensions that do further customizations, those remain segragated.
+	* Reverted segregation on several extensions as they do not need additional customization. For extensions that do further customizations, those remain segregated.
 - Fixes:
     * Clean Database now works on Multi-Site installations.
     * Corrected 'Remove Product Count' menu item to call the correct page. 
@@ -29,7 +48,7 @@ version 1.0.2 ( updated 05-20-2020 )
 <!---------------------------------------------------------------------------!>
 version 1.0.1 ( updated 05-19-2020 )
 - Changes:
-	* Segragated settings to their own pages to allow for additional customization coming with a later update.
+	* Segregated settings to their own pages to allow for additional customization coming with a later update.
 - Fixes:
 	* Fixed Disable Users so the function is now called and runs correctly.
 - Known Issues:
@@ -46,7 +65,7 @@ version 1.0.0 ( created 05-18-2020 )
 	* Disable Users function called incorrectly.
 - Changes Coming Soon:
 	* Fix Disable Users function call
-	* Segragate settings to their own pages to allow for additional customization.
+	* Segregate settings to their own pages to allow for additional customization.
 	* Add Clean Database button on main settings page.
 	* Add HamLIT Web Solutions links and context on main settings page.
 	* Add Admin Live Chat to login page (or add option to enable on login page.)

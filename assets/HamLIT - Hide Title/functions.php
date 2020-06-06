@@ -1,22 +1,6 @@
 <?php
-
-/*
-Plugin Name: HamLIT - Hide Title
-Plugin URI: https://github.com/hamlitwebsolutions/HamLIT-HideTitle
-Description: Adds option to remove page/post title from within the editor.
-Author: HamLIT Web Solutions
-Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
-Text Domain: HamLIT - Hide Title
-Domain Path: /languages
-*/
-
 if ( !class_exists( 'HamLITHideTitle' ) ) {
-
     class HamLITHideTitle {
-
     	private $slug = 'HamLIT_toggle_title';
     	private $selector = '.entry-title';
     	private $title;

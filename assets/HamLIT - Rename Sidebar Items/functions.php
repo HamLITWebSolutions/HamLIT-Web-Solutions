@@ -1,17 +1,22 @@
 <?php
-
-/*
-Plugin Name: HamLIT - Rename Sidebar Items
-Plugin URI: https://github.com/hamlitwebsolutions/HamLIT-RenameSidebarItems
-Description: Ra-names Sidebar Items in the Admin Dashboard
-Author: HamLIT Web Solutions
-Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
-Text Domain: HamLIT - Rename Sidebar Items
-Domain Path: /languages
-*/
+########## HamLIT - Rename Sidebar Items Menu & Page ##########
+if( function_exists( 'hamlit_menu' ) ) {
+        function hamlit_rename_sidebar_items_menu()
+        {
+        add_submenu_page(
+            'HamLIT-Web-Solutions', //parent slug
+            'HamLIT - Rename Sidebar Items', //page title
+            'Rename Sidebar Items', //menu text
+            'manage_options', //capability level
+            '/HamLIT-Rename-Sidebar-Items', //slug
+            'hamlit_rename_sidebar_items_page'); //function to run
+        }
+}
+add_action('admin_menu', 'hamlit_rename_sidebar_items_menu');
+function hamlit_rename_sidebar_items_page() {
+    include "page.php";
+}
+###### HamLIT - Rename Sidebar Items ##########
 add_action( 'admin_menu', 'rename_woocoomerce_hamlit', 999 );
 
 function rename_woocoomerce_hamlit() 
@@ -27,9 +32,9 @@ function rename_woocoomerce_hamlit()
 #		return;
 #	$menu[$woo][0] = 'Store Settings';
   
-	if( !$bookings)
-		return;
-	$menu[$bookings][0] = 'Appointments';
+#	if( !$bookings)
+#		return;
+#	$menu[$bookings][0] = 'Appointments';
 
 } #Leave this Bracket to close the search and replace!
 

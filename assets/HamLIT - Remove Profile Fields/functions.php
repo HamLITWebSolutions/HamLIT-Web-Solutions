@@ -1,20 +1,4 @@
 <?php
-
-/*
-Plugin Name: HamLIT - Remove Profile Fields
-Plugin URI: https://github.com/hamlitwebsolutions/HamLIT-RemoveProfileFields
-Description: Removes Extra Fields to User Profile, Registration, and Backend Users Page
-Author: HamLIT Web Solutions
-Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
-Text Domain: HamLIT - Remove Profile Fields
-Domain Path: /languages
-*/
-/*
- * Removes Redundant Profile Fields
- */
 function remove_redundant_profile_fields()
 {
 #Removes URL
@@ -35,7 +19,6 @@ function remove_redundant_profile_fields()
 */
 #Removes Profile Picture
     echo '<style>tr.user-profile-picture{ display: none; }</style>';
-
 }
 add_action( 'admin_head-user-edit.php', 'remove_redundant_profile_fields' );
 add_action( 'admin_head-profile.php',   'remove_redundant_profile_fields' );

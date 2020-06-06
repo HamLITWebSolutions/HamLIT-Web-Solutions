@@ -1,16 +1,4 @@
 <?php
-/*
-Plugin Name: HamLIT - Transient Manager
-Plugin URI: https://github.com/hamlitwebsolutions/HamLIT-Transient-Manager
-GitHub Plugin URI: hamlitwebsolutions/HamLIT-Transient-Manager
-Description: Easily manage and clear transients in the WP Database.
-Author: HamLIT Web Solutions
-Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
-Text Domain: HamLIT-Transient-Manager
-Domain Path: /languages
-*/
-
 class hamlit_Transients_Manager {
 
 	/**

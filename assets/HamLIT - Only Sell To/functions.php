@@ -1,19 +1,22 @@
 <?php
-
-/*
-Plugin Name: HamLIT - Only Sell To
-Plugin URI: https://github.com/hamlitwebsolutions/HamLIT-OnlySellTo
-Description: Only Sell To Specific States Within The United States. Add and Remove States By Commenting Out State Exclusions using #
-Author: HamLIT Web Solutions
-Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
-Text Domain: HamLIT - Only Sell To
-Domain Path: /languages
-*/
-
-
+########## HamLIT - Only Sell To Menu & Page ##########
+if( function_exists( 'hamlit_menu' ) ) {
+        function hamlit_only_sell_to_menu()
+        {
+        add_submenu_page(
+            'HamLIT-Web-Solutions', //parent slug
+            'HamLIT - Only Sell To', //page title
+            'Only Sell To:', //menu text
+            'manage_options', //capability level
+            '/HamLIT-Only-Sell-To', //slug
+            'hamlit_only_sell_to_page'); //function to run
+        }
+}
+add_action('admin_menu', 'hamlit_only_sell_to_menu');
+function hamlit_only_sell_to_page() {
+    include "page.php";
+}
+###### HamLIT - Only Sell To ##########
 function wc_sell_only_states( $states ) {
 $states['US'] = array(
 	'AL' => __( 'Alabama', 'woocommerce' ),

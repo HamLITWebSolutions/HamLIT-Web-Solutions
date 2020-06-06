@@ -1,17 +1,4 @@
 <?php
-
-/*
-Plugin Name: HamLIT - Site Info Shortcode
-Plugin URI: https://github.com/hamlitwebsolutions/HamLIT-SiteInfoShortcode
-Description: Allows you to insert site info into text by using a shortcode. Example [bloginfo info='name']
-Author: HamLIT Web Solutions
-Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
-Text Domain: HamLIT - Site Info Shortcode
-Domain Path: /languages
-*/
 add_shortcode('bloginfo', function($atts) {
 
    $atts = shortcode_atts(array('filter'=>'', 'info'=>''), $atts, 'bloginfo');

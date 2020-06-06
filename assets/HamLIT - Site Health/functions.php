@@ -1,32 +1,19 @@
 <?php
-
-/*
-Plugin Name: HamLIT - Site Health
-Plugin URI: https://github.com/hamlitwebsolutions/HamLIT-SiteHealth
-Description: Improves Site Health Testing
-Author: HamLIT Web Solutions
-Author URI: https://hamlitwebsolutions.com
-Version: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
-Text Domain: HamLIT-Site-Health
-Domain Path: /languages
-*/
-
 /**
  * Register the Site Health Tool settings page
  */
-function shtm_add_settings_page() {
-	add_submenu_page(
-		'options-general.php',
-		__( 'Site Health Tool Settings', 'HamLIT-Site-Health' ),
-		__( 'Site Health', 'HamLIT-Site-Health' ),
-		'manage_options',
-		'shtm-settings',
-		'shtm_settings_page'
-	);
+if( function_exists( 'hamlit_menu' ) ) {
+        function hamlit_site_health_page() {
+        	add_submenu_page(
+                'HamLIT-Web-Solutions', //parent slug
+                'HamLIT - Site Health', //page title
+                'Site Health', //menu text
+                'manage_options', //capability level
+                '/HamLIT-Site-Health', //slug
+                'hamlit_site_health_menu'); //function to run
+        }
 }
-add_action( 'admin_menu', 'shtm_add_settings_page', 10 );
+add_action( 'admin_menu', 'hamlit_site_health_page', 10 );
 
 /**
  * Filters the list of registered Site Health Tool tests
@@ -34,10 +21,10 @@ add_action( 'admin_menu', 'shtm_add_settings_page', 10 );
  * @param array $tests The array of registered Site Health tests
  * @return array The filtered list of tests.
  */
-function shtm_filter_tests( $tests ) {
+function hamlit_siteHealth_filter_tests( $tests ) {
 	// Don't filter on the plugin settings page
-	if ( get_current_screen()->base !== 'settings_page_shtm-settings' ) {
-		$hidden_tests = (array) maybe_unserialize( get_option( 'shtm_hidden_tests' ) );
+	if ( get_current_screen()->base !== 'settings_page_hamlit_siteHealth-settings' ) {
+		$hidden_tests = (array) maybe_unserialize( get_option( 'hamlit_siteHealth_hidden_tests' ) );
 		foreach ( $hidden_tests as $test ) {
 			unset( $tests['direct'][ $test ] );
 			unset( $tests['async'][ $test ] );
@@ -46,24 +33,24 @@ function shtm_filter_tests( $tests ) {
 
 	return $tests;
 }
-add_filter( 'site_status_tests', 'shtm_filter_tests', 10000 );
+add_filter( 'site_status_tests', 'hamlit_siteHealth_filter_tests', 10000 );
 
 /**
  * Disable the dashboard widget
  */
-function shtm_filter_dashboard_widget() {
-	if ( ! get_option( 'shtm_widget_enabled', 1 ) ) {
+function hamlit_siteHealth_filter_dashboard_widget() {
+	if ( ! get_option( 'hamlit_siteHealth_widget_enabled', 1 ) ) {
 		global $wp_meta_boxes;
 		unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_site_health'] );
 	}
 }
-add_action( 'wp_dashboard_setup', 'shtm_filter_dashboard_widget' );
+add_action( 'wp_dashboard_setup', 'hamlit_siteHealth_filter_dashboard_widget' );
 
 
 /**
  * Output for the Site Health Tool Settings page
  */
-function shtm_settings_page() { ?>
+function hamlit_site_health_menu() { ?>
 
 	<div class="wrap">
 		<h1><?php _e( 'Site Health Tool Settings', 'HamLIT-Site-Health' ); ?></h1>
@@ -76,15 +63,15 @@ function shtm_settings_page() { ?>
 
 	include_once ABSPATH . 'wp-admin/includes/class-wp-site-health.php';
 	$tests    = WP_Site_Health::get_tests();
-	$disabled = get_option( 'shtm_hidden_tests', array() );
-	$widget   = get_option( 'shtm_widget_enabled', 1 );
+	$disabled = get_option( 'hamlit_siteHealth_hidden_tests', array() );
+	$widget   = get_option( 'hamlit_siteHealth_widget_enabled', 1 );
 	$enabled  = array();
 
 	// If tests have been submitted, process the form data
 	if ( isset( $_POST['submit'] ) ) {
 
 		// Verify form nonce before saving
-		if ( isset( $_POST['shtm-disable-tests-nonce'] ) && wp_verify_nonce( $_POST['shtm-disable-tests-nonce'], 'shtm-disable-tests' ) ) {
+		if ( isset( $_POST['hamlit_siteHealth-disable-tests-nonce'] ) && wp_verify_nonce( $_POST['hamlit_siteHealth-disable-tests-nonce'], 'hamlit_siteHealth-disable-tests' ) ) {
 
 			// Validate that submitted tests are actually registered
 			$test_names = array_merge( $tests['direct'], $tests['async'] );
@@ -98,11 +85,11 @@ function shtm_settings_page() { ?>
 			// This ensures that any tests that are added after this setting is
 			// saved will still get run.
 			$new_disabled = array_keys( array_diff_key( $test_names, array_flip( $enabled ) ) );
-			update_option( 'shtm_hidden_tests', $new_disabled );
+			update_option( 'hamlit_siteHealth_hidden_tests', $new_disabled );
 			$disabled = $new_disabled;
 
 			$widget = ( isset( $_POST['widget'] ) ) ? 1 : 0;
-			update_option( 'shtm_widget_enabled', $widget );
+			update_option( 'hamlit_siteHealth_widget_enabled', $widget );
 
 			$classes = 'notice notice-success is-dismissible';
 			$message = __( 'Settings saved.', 'HamLIT-Site-Health' );
@@ -120,7 +107,7 @@ function shtm_settings_page() { ?>
 	<form method="POST" action="">
 		<h2><?php _e( 'Tests Enabled', 'HamLIT-Site-Health' ); ?></h2>
 		<p><?php _e( 'Certain tests may not be relevant to your environment. Uncheck a test to remove it from the Site Health Status screen.', 'HamLIT-Site-Health' ); ?></p>
-			<?php wp_nonce_field( 'shtm-disable-tests', 'shtm-disable-tests-nonce' ); ?>
+			<?php wp_nonce_field( 'hamlit_siteHealth-disable-tests', 'hamlit_siteHealth-disable-tests-nonce' ); ?>
 			<ul>
 			<?php
 			foreach ( $tests as $type ) {
