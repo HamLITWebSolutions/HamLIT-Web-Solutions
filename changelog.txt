@@ -1,3 +1,13 @@
+version 1.0.5 ( updated 06-05-2020 )
+- Changes:
+	* N/A
+- Fixes:
+    * Fixed Live Chat extension not displaying content on page. This was caused by the menu calling the incorrect function "hamlit_only_sell_to_page" which was non-existant on the functions.php
+- Known Issues:
+	* N/A
+- Changes Coming Soon:
+	* Add further customization to several functions/extensions.
+<!---------------------------------------------------------------------------!>
 version 1.0.4 ( updated 06-05-2020 )
 - Changes:
 	* Sub-Menu Items will only be created if the function is running.
@@ -13,7 +23,7 @@ version 1.0.4 ( updated 06-05-2020 )
     * Fixed XMLRPC connection issues when Admin Live Chat is enabled on Login screen by changing the hook from 'login_url' to 'login_enqueue_scripts'
     * Fixed issue where Media Library would not load. Caused by php outside of the php close tag in optionvariables.php.
 - Known Issues:
-	* N/A
+	* Live Chat extension not displaying any content on page.
 - Changes Coming Soon:
 	* Add further customization to several functions/extensions.
 <!---------------------------------------------------------------------------!>

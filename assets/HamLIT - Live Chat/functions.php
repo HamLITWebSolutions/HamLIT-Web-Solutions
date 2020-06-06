@@ -9,7 +9,7 @@ if( function_exists( 'hamlit_menu' ) ) {
             'Live Chat', //menu text
             'manage_options', //capability level
             '/HamLIT-Live-Chat', //slug
-            'hamlit_only_sell_to_page'); //function to run
+            'hamlit_live_chat_page'); //function to run
         }
 }
 add_action('admin_menu', 'hamlit_live_chat_menu');
