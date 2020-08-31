@@ -52,6 +52,7 @@ if ( !current_user_can( 'manage_options' ) )  {
                 <?php if (get_option('hamlit_hide_wp_version') == 1){$chkysno = 'checked';} else {$chkysno = '';}?>
                 <td><input type="checkbox" name="hamlit_hide_wp_version" value="1" <?php echo $chkysno; ?> />*This hides Wordpress version number from the footer on the bottom right corner.</td>
         </tr>
+        <!-- Section Break -->
         <tr valign="top">
                 <th scope="row" colspan="2">
                 <hr>

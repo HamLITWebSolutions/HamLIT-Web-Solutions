@@ -1,3 +1,17 @@
+version 1.0.6 ( updated 08-30-2020 )
+- Changes:
+	* Reconfigured HamLIT - Live Chat using new POST method.
+	* Changed widget content in HamLIT - Remove WP Branding.
+	* Added Automatic Order Complete for Subscription Renewals Extension.
+	* Added Rebrand Woocommerce Extension (Need to organize files into rightful place still (Currently in Remove Dashboard Widgets))
+	* Included MyCRED Overview in Remove Dashboard Widgets Extension.
+- Fixes:
+    * Fixed issue where Clean Database did not clean 'hamlit_init_customloginpage'
+- Known Issues:
+	* N/A
+- Changes Coming Soon:
+	* Add further customization to several functions/extensions.
+<!---------------------------------------------------------------------------!>
 version 1.0.5 ( updated 06-05-2020 )
 - Changes:
 	* N/A

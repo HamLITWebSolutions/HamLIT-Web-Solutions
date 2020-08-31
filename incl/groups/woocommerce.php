@@ -1,3 +1,9 @@
+    <!-- Auto Complete Subscription Renewals -->
+        <tr valign="top">
+            <th scope="row">Auto Complete Subscription Renewals:</th>
+            <?php if (get_option('hamlit_autocompsubsrenewals') == 1){$checkedyesno = 'checked';} else {$checkedyesno = '';}?>
+            <td><input type="checkbox" name="hamlit_autocompsubsrenewals" value="1" <?php echo $checkedyesno; ?> />*This automatically completes all subscription renewal orders.</td>
+        </tr>
     <!-- Change My Account Sections -->
         <tr valign="top">
             <th scope="row">Change My Account Sections:</th>

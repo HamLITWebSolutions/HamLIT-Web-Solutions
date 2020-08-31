@@ -1,57 +1,48 @@
 <?php
-// Set Options for Function
-$options = [ 
-    'hamlit_livechat',
-        'hamlit_livechatcode',
-        'hamlit_hidelivechat',
-];
 
-// Post Changes to Options when Submitted
-if(isset($_POST['litsubmit'])){
-            foreach ( $options as $option ){
-            $checkboxvalue = !empty($_POST[$option]) ? $_POST[$option]:0;
-	        update_option( $option, stripslashes($checkboxvalue) );
-        }
-
-    ##########////////// END!!!! NOTHING BELOW THIS LINE //////////##########
-            ######## Submitted Changes, Display Success Message #######
-            echo '<div class="updated"> <p>' . __('Success: Your changes have been saved.') . '</p> </div>';
-            #echo "<meta http-equiv='refresh' content='0'>";
-}
+if ( !current_user_can( 'manage_options' ) )  {
+        wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+    }
 ?>
-
 <html>
 <head>
 <style>
 /*INPUT STYLE HERE*/
 </style>
 </head>
-
+<?php settings_errors(); ?>
 <body>
-    <h1>Live Chat Settings</h1>
-<form method="post" action="">
-<!-- Priority Support Settings -->
-<div><br></div>
-<div><input type = "checkbox" id = "hamlit_livechat" name = "hamlit_livechat" value = "1" <?php if(get_option('hamlit_livechat') == 1) echo 'checked';?>/> Enable Live Chat Extension </div>
-<div><br></div>
-<!-- If Admin Live Chat Enabled, Give Option to Hide Widget and Enable on Login Screen -->
-<?php 
-if (trim(get_option('hamlit_livechat')) == 1)
-    {
-        ?>
-         <div style="display:block">
-             <textarea id="hamlit_livechatcode" onclick="this.select()" name="hamlit_livechatcode" style="height:200px;width:400px"><?php  echo htmlentities(get_option('hamlit_livechatcode')) ?></textarea></div>
-                  <div><br></div>
-        <div style="display:block">
-         <input type = "checkbox" id = "hamlit_hidelivechat" name = "hamlit_hidelivechat" value = "1" <?php if(get_option('hamlit_hidelivechat') == 1) echo 'checked';?>/> ZOHO SALESIQ ONLY: Hide Chat widget (Chat Widget Disabled, Visitor Tracking Enabled)</div>
-         <?php
-    } 
-?>
-<!-- Submit Button -->
-<div><br></div>
-         <input type="submit" name="litsubmit" class="button button-primary" value="Save Changes"/>
+    <h3>Live Chat Settings</h3>
+    <p><i>***Save Changes at the bottom of the page!<br>
+      **Anything you would not like to use simply leave blank and no changes will be made.</i></p>
+<form method="post" action="options.php">
+    <?php settings_fields( 'hamlit_livechat_group' ); ?>
+    <table class="form-table">
+        <!-- First Section -->
+        <tr valign="top">
+            <th scope="row" colspan="2">
+                <h3 style="text-decoration: underline;">Live Chat Script:</h3>
+             </th>
+        </tr>
+        <tr valign="top">
+                <th scope="row">Script:</th>
+                <td>
+                    <textarea name="hamlit_livechatcode" style="height:200px;width:400px"><?php echo htmlentities(get_option('hamlit_livechatcode'));?></textarea>
+                </td>
+        </tr>
+        <!-- Second Section -->
+        <tr valign="top">
+            <th scope="row" colspan="2"><hr>
+                <h3 style="text-decoration: underline;">Chat Customizations:</h3>
+             </th>
+        </tr>
+        <tr valign="top">
+                <th scope="row">Hide LiveChat Widget:</th>
+                <?php if (get_option('hamlit_hidelivechat') == 1){$chkysno = 'checked';} else {$chkysno = '';}?>
+                <td><input type="checkbox" name="hamlit_hidelivechat" value="1" <?php echo $chkysno; ?> />*ZOHO SALESIQ ONLY: (Chat Widget Disabled, Visitor Tracking Enabled.)</td>
+        </tr>
+    </table>
+<?php submit_button();?>
 </form>
 </body>
 </html>
-
-

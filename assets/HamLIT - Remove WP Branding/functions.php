@@ -27,10 +27,10 @@ function hamlit_remove_wp_branding_init() {
         add_option( 'hamlit_lower_left_text', 'Designed & Hosted by <a href="https://hamlitwebsolutions.com">HamLIT Web Solutions</a>' );
         add_option( 'hamlit_hide_wp_version', '1');
         add_option( 'hamlit_remove_comp_dashboards', '1' );
-        add_option( 'hamlit_left_widget_title', 'Left Widget' );
+        add_option( 'hamlit_left_widget_title', 'New Widget' );
         add_option( 'hamlit_left_widget_content', 'You can alter this content on the <a href="'. get_admin_url(null, 'admin.php?page=HamLIT-Remove-WP-Branding') .'">settings</a> page.' );
-        add_option( 'hamlit_right_widget_title', 'Right Widget' );
-        add_option( 'hamlit_right_widget_content', 'You may also leave these blank if you would not like them added.' );
+        add_option( 'hamlit_right_widget_title', 'Need Help?' );
+        add_option( 'hamlit_right_widget_content', 'We are happy to help in any way that we can! Please reach out to us via our <a onclick=' . '$zoho.salesiq.floatwindow.visible("show");' . '>Live Chat</a> or on our <a href="https://hamlitwebsolutions.com/contact-us">Contact Us</a> page for assistance!' );
         //usage: add_option( $option, $value, $deprecated, $autoload );
         //example: add_option( 'myhack_extraction_length', '255', '', 'yes' );
         update_option('hamlit_init_removewpbranding', 'initialized');

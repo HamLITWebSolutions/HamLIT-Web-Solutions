@@ -6,7 +6,7 @@ GitHub Plugin URI: hamlitwebsolutions/HamLIT-Web-Solutions
 Description: Provides Customization Options Provided by HamLIT Web Solutions
 Author: HamLIT Web Solutions
 Author URI: https://hamlitwebsolutions.com
-Version: 1.0.5
+Version: 1.0.6
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Text Domain: HamLIT-Web-Solutions
@@ -80,6 +80,15 @@ if (trim(get_option('hamlit_enablelivechat')) == 1) {
 }
 ///////////////////////////////////////////////////
 ///// End HamLIT - Admin Live Chat Widget /////////
+///////////////////////////////////////////////////
+###################################################
+###### HamLIT - Auto Complete Subs. Renewals ######
+###################################################
+if (trim(get_option('hamlit_autocompsubsrenewals')) == 1) {
+    include ('assets/HamLIT - Auto Complete Subscription Renewals/functions.php');
+}
+///////////////////////////////////////////////////
+//// End HamLIT - Auto Complete Subs. Renewals ////
 ///////////////////////////////////////////////////
 ###################################################
 ####### HamLIT - Change My Account Sections #######

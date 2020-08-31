@@ -6,6 +6,7 @@ $options = [
     'hamlit_enablelivechat',
         'hamlit_loginchat',
         'hamlit_hidechat',
+    'hamlit_autocompsubsrenewals',
     'hamlit_changemyaccountsections',
     'hamlit_changewoocolumns',
     'hamlit_customloginpage', //$clp_options
@@ -13,11 +14,12 @@ $options = [
         'hamlit_custom_login_button_hover',
         'hamlit_login_logo',
         'hamlit_login_logo_height',
+        'hamlit_init_customloginpage',
     'hamlit_deferjs',
     'hamlit_disableusers',
     'hamlit_displayuserid',
     'hamlit_hidetitle',
-    'hamlit_livechat',
+    'hamlit_livechat', // $lc_options
         'hamlit_livechatcode',
         'hamlit_hidelivechat',
     'hamlit_onlysellto',
@@ -54,6 +56,7 @@ $simple_options = [
     'hamlit_enablelivechat',
         'hamlit_loginchat',
         'hamlit_hidechat',
+    'hamlit_autocompsubsrenewals',
     'hamlit_changemyaccountsections',
     'hamlit_changewoocolumns',
     'hamlit_customloginpage', //$clp_options
@@ -61,9 +64,7 @@ $simple_options = [
     'hamlit_disableusers',
     'hamlit_displayuserid',
     'hamlit_hidetitle',
-    'hamlit_livechat',
-        'hamlit_livechatcode',
-        'hamlit_hidelivechat',
+    'hamlit_livechat', //$lc_options
     'hamlit_onlysellto',
     'hamlit_removedashwidgets',
     'hamlit_removepostcount',
@@ -102,6 +103,13 @@ $clp_options = [
         'hamlit_custom_login_button_hover',
         'hamlit_login_logo',
         'hamlit_login_logo_height',
+        'hamlit_init_customloginpage',
 ];
+
+//Live Chat Options
+$lc_options = [
+        'hamlit_livechatcode',
+        'hamlit_hidelivechat',
+    ];
 
 ?>

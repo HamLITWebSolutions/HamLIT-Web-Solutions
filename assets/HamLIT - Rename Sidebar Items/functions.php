@@ -24,13 +24,13 @@ function rename_woocoomerce_hamlit()
     global $menu;
 
     // Find the Items you want to rename.
-#	$woo = recursive_array_search_php_91365( 'WooCommerce', $menu );
+	$woo = recursive_array_search_php_91365( 'WooCommerce', $menu );
 #	$bookings = recursive_array_search_php_91365( 'Bookings', $menu );
 
     // Validate and Re-Name
-#	if( !$woo )
-#		return;
-#	$menu[$woo][0] = 'Store Settings';
+	if( !$woo )
+		return;
+	$menu[$woo][0] = 'Store Settings';
   
 #	if( !$bookings)
 #		return;

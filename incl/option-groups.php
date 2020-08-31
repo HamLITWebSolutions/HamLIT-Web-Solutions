@@ -16,6 +16,10 @@ function hamlit_settings() {
     //Register options for Custom Login Page
     foreach ($clp_options as $clp_option)
     {register_setting('hamlit_customloginpage_group', $clp_option);}
+
+    //Register options for Live Chat
+    foreach ($lc_options as $lc_option)
+    {register_setting('hamlit_livechat_group', $lc_option);}
 }
 add_action('admin_init', 'hamlit_settings' );
 //function to set and register settings in the database upon save end

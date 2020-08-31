@@ -1,5 +1,6 @@
 <?php
 ########## HamLIT - Live Chat Menu & Page ##########
+//function to set up admin menu item and page
 if( function_exists( 'hamlit_menu' ) ) {
         function hamlit_live_chat_menu()
         {
@@ -13,9 +14,12 @@ if( function_exists( 'hamlit_menu' ) ) {
         }
 }
 add_action('admin_menu', 'hamlit_live_chat_menu');
+//function to set up admin menu item and page end
+
 function hamlit_live_chat_page() {
     include "page.php";
 }
+
 ###### HamLIT - Live Chat ##########
 function hamlit_livechat_embedfooter()
 {
